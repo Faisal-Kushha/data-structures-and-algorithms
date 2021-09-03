@@ -146,10 +146,12 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  str.sort((a, b) => {
-    return a - b;
-  });
-  return str;
+  let arr = str.split("");
+  let newArr = arr.reduce((acc, val) => {
+    acc = val + acc + "";
+    return acc;
+  }, []);
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
