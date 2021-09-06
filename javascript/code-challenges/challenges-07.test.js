@@ -72,16 +72,10 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-
-  result.push(
-    str.slice(0, 1),
-    str.slice(0, 2),
-    str.slice(0, 3),
-    str.slice(0, 4),
-    str.slice(0, 5),
-    str.slice(0, 6)
-    // str.slice(0, 7)
-  );
+  for (let i = 0; i < str.length; i++) {
+    result.push(str.slice(i, str.length));
+  }
+  result.push("");
 
   return result;
 };
@@ -287,7 +281,7 @@ describe("Testing challenge 3", () => {
   });
 });
 
-xdescribe("Testing challenge 4", () => {
+describe("Testing challenge 4", () => {
   test("It should return a list of shortening words", () => {
     expect(howMuchPencil("Welcome")).toStrictEqual([
       "Welcome",
@@ -328,7 +322,7 @@ describe("Testing challenge 5", () => {
   });
 });
 
-xdescribe("Testing challenge 6", () => {
+describe("Testing challenge 6", () => {
   test("It should return a list of foods", () => {
     expect(listFoods(gruffaloCrumble)).toStrictEqual([
       "Gruffalo",
