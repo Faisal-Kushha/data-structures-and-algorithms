@@ -84,41 +84,30 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  // let arr = [];
-
-  // for (let i = 0; i < input.length; i++) {
-  //   for (let j = 0; j < input[i].length; j++) {
-  //     if (input[i][j] % 5 == 0) {
-  //       arr.push(input[i][j] ** 2);
-  //     }
-  //   }
-  // }
-  // return arr;
-
-  let newarr = [];
+  let arr = [];
   for (let i = 0; i < input.length; i++) {
-    let m = [];
-    input[i].filter((element) => {
-      if (typeof element === "number") {
-        if (element % 5 == 0) {
-          m.push(element);
+    let newArr = [];
+    input[i].filter((item) => {
+      if (typeof item === "number") {
+        if (item % 5 == 0) {
+          newArr.push(item);
         }
       }
     });
-    newarr.push(m);
+    arr.push(newArr);
   }
-  let final = [];
-  for (let j = 0; j < newarr.length; j++) {
-    let m = [];
-    newarr[j].filter((elemen) => {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    let arr2 = [];
+    arr[i].filter((item) => {
       if (true) {
-        m.push(2 ** elemen);
+        arr2.push(2 ** item);
       }
     });
-    final.push(m);
+    result.push(arr2);
   }
 
-  return final;
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
