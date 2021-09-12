@@ -38,16 +38,16 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  let arr = [];
+  let newArr = [];
 
   for (let i = 0; i < input.length; i++) {
     for (let j = 0; j < input[i].length; j++) {
       if (input[i][j] == target) {
-        arr.push(target);
+        newArr.push(target);
       }
     }
   }
-  return arr.length;
+  return newArr.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -84,30 +84,7 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  let arr = [];
-  for (let i = 0; i < input.length; i++) {
-    let newArr = [];
-    input[i].filter((item) => {
-      if (typeof item === "number") {
-        if (item % 5 == 0) {
-          newArr.push(item);
-        }
-      }
-    });
-    arr.push(newArr);
-  }
-  let result = [];
-  for (let i = 0; i < arr.length; i++) {
-    let arr2 = [];
-    arr[i].filter((item) => {
-      if (true) {
-        arr2.push(2 ** item);
-      }
-    });
-    result.push(arr2);
-  }
-
-  return result;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -175,13 +152,13 @@ let starWarsData = [
 ];
 
 let findMaleAndFemale = (data) => {
-  let arr = [];
+  let newArr = [];
   for (let i = 0; i < data.length; i++) {
     if (data[i].gender === "male" || data[i].gender === "female") {
-      arr.push(data[i].name);
+      newArr.push(data[i].name);
     }
   }
-  return arr.join(" and ");
+  return newArr.join(" and ");
 };
 
 /* ------------------------------------------------------------------------------------------------
