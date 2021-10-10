@@ -6,4 +6,8 @@ def reverse_list(ll):
         linked list in reversed form
     """
     # put your function implementation here
-    return ll
+
+
+    arr = ll[::-1]
+
+    return arr
