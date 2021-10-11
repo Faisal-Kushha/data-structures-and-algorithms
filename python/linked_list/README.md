@@ -1,3 +1,8 @@
+
+# Added a value to an array
+
+![array](linked_list/DSC_0115[967].jpg)
+
 # Reverse an Array
 
 I used the slicing feature to reverse the array without using any built in method
@@ -9,3 +14,4 @@ I used the slicing feature to reverse the array without using any built in metho
 ## Approach & Efficiency
 
 I was going to use the nested for loop but it was not efficient like slicing feature in Python
+
