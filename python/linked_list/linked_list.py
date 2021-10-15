@@ -38,6 +38,7 @@ class LinkedList:
         return output
 
 
+
 if __name__ == "__main__":
     ll = LinkedList()
     ll.insert(1)
@@ -45,3 +46,10 @@ if __name__ == "__main__":
     ll.insert(3)
     ll.insert(4)
     ll.__str__()
+
+#     def reverse_list(ll):
+#         # method body here
+
+#         arr = ll[::-1]
+#         return arr
+
