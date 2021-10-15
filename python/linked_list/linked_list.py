@@ -14,6 +14,7 @@ class LinkedList:
 
     def insert(self, value):
         self.head = Node(value, self.head)
+        print(self.head.value)
 
     def includes(self, value):
         the_list = self.head
@@ -27,13 +28,13 @@ class LinkedList:
         output = ""
         the_list = self.head
         while the_list:
-            value = the_list.value
-            # if the_list.next_ == None:
-            output = output + f"( {value} ) -> NULL"
-            # else:
-            the_list = the_list.next_
-            # output = output + f"( {value} ) -> "
-
+            value = str(the_list.value)
+            if the_list.next_ == None:
+                output = output + '{ ' + value + ' } -> NULL'
+                break
+            else:
+                the_list = the_list.next_
+                output = output + '{ ' + value + ' } -> '
         return output
 
 

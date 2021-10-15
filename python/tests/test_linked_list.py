@@ -34,38 +34,43 @@ def test_node_without_value():
 
 def test_new_linked_list_is_empty():
     expected = None
-    x = LinkedList()
-    actual = x.head
+    ll = LinkedList()
+    actual = ll.head
     assert actual == expected
 
 
 def test_linked_list_insert():
     expected = None
-    x = LinkedList()
-    actual = x.insert(1)
+    ll = LinkedList()
+    actual = ll.insert(1)
     assert actual == expected
 
 
 def test_linked_list_includes_true():
     expected = True
-    LinkedList().insert(1)
-    LinkedList().insert(2)
-    LinkedList().insert(3)
-    actual = LinkedList().includes(1)
+    ll = LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    actual = ll.includes(1)
     assert actual == expected
 
 
 def test_linked_list_includes_false():
     expected = False
-    LinkedList().insert(1)
-    LinkedList().insert(2)
-    LinkedList().insert(3)
-    actual = LinkedList().includes(4)
+    ll = LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    actual = ll.includes(4)
     assert actual == expected
 
 
 def test_return_all_values():
-    expected = '( 1 ) -> ( 2 ) -> ( 3 ) -> NULL'
-    x = LinkedList()
-    actual = x.__str__()
+    expected = '{ 1 } -> { 2 } -> { 3 } -> NULL'
+    ll = LinkedList()
+    ll.insert(3)
+    ll.insert(2)
+    ll.insert(1)
+    actual = ll.__str__()
     assert actual == expected
