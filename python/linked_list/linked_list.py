@@ -6,17 +6,21 @@ class Node:
 
 class LinkedList:
     """
-    Put docstring here
+    Add a node to the head of the linked list
     """
 
     def __init__(self):
         self.head = None
 
     def insert(self, value):
+
         self.head = Node(value, self.head)
         print(self.head.value)
 
     def includes(self, value):
+        """
+        Return True if the value is the Linked list and False if the value in not in the Linked list
+        """
         the_list = self.head
         while the_list:
             if the_list.value == value:
@@ -25,6 +29,9 @@ class LinkedList:
         return False
 
     def __str__(self):
+        """
+        Loop over all the nodes and print all the values in one line
+        """
         output = ""
         the_list = self.head
         while the_list:
@@ -36,7 +43,6 @@ class LinkedList:
                 the_list = the_list.next_
                 output = output + '{ ' + value + ' } -> '
         return output
-
 
 
 if __name__ == "__main__":
@@ -52,4 +58,3 @@ if __name__ == "__main__":
 
 #         arr = ll[::-1]
 #         return arr
-

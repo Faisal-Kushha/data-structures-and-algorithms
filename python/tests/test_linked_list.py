@@ -7,67 +7,91 @@ def test_import():
 
 
 def test_node_has_int_data():
+    # Arrange
     expected = 1
+    # Actual
     node = Node(1)
     actual = node.value
+    # Assert
     assert actual == expected
 
 
 def test_node_has_str_data():
+    # Arrange
     expected = "x"
+    # Actual
     node = Node("x")
     actual = node.value
+    # Assert
     assert actual == expected
 
 
 def test_node_is_a_Node():
+    # Arrange
     expected = "Node"
+    # Actual
     node = Node(1)
     actual = type(node).__name__
+    # Assert
     assert actual == expected
 
 
 def test_node_without_value():
+
     with pytest.raises(TypeError):
         node = Node()
 
 
 def test_new_linked_list_is_empty():
+    # Arrange
     expected = None
+    # Actual
     ll = LinkedList()
     actual = ll.head
+    # Assert
     assert actual == expected
 
 
 def test_linked_list_insert():
+    # Arrange
     expected = None
+    # Actual
     ll = LinkedList()
     actual = ll.insert(1)
+    # Assert
     assert actual == expected
 
 
 def test_linked_list_includes_true():
+    # Arrange
     expected = True
+    # Actual
     ll = LinkedList()
     ll.insert(1)
     ll.insert(2)
     ll.insert(3)
     actual = ll.includes(1)
+    # Assert
     assert actual == expected
 
 
 def test_linked_list_includes_false():
+    # Arrange
     expected = False
+    # Actual
     ll = LinkedList()
     ll.insert(1)
     ll.insert(2)
     ll.insert(3)
     actual = ll.includes(4)
+    # Assert
     assert actual == expected
 
 
 def test_return_all_values():
+    # Arrange
     expected = '{ 1 } -> { 2 } -> { 3 } -> NULL'
+    # Actual
     ll = LinkedList()
     ll.insert(3)
     ll.insert(2)
