@@ -76,9 +76,9 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 -   **Run filtered tests** - `pytest -k some_filter_text`
 -   **Run in watch mode** - `ptw` or `pytest-watch`
 
-
 class02 [Readme](linked_list/README.md)
 
-| Class Number | Class Title                     |
-| :----------- | :------------------------------ |
-| 1.           | [Readme](linked_list/README.md) |
+| Class Number | Class Title                                         |
+| :----------- | :-------------------------------------------------- |
+| 1.           | [Readme](linked_list/README.md)                     |
+| 5.           | [Linked_List](../python/linked_list/linked_list.py) |
