@@ -7,6 +7,8 @@ class LinkedList:
         # initialization here
         pass
 
-    def some_method(self):
+    def reverse_list(ll):
         # method body here
-        pass
+
+        arr = ll[::-1]
+        return arr
