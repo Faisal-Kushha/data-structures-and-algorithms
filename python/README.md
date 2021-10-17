@@ -82,3 +82,4 @@ class02 [Readme](linked_list/README.md)
 | :----------- | :-------------------------------------------------- |
 | 1.           | [Readme](linked_list/README.md)                     |
 | 5.           | [Linked_List](../python/linked_list/linked_list.py) |
+| 6.           | [Linked_List](../python/linked_list/linked_list.py) |

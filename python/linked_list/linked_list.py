@@ -44,6 +44,49 @@ class LinkedList:
                 output = output + '{ ' + value + ' } -> '
         return output
 
+    def append(self, value='null'):
+        """
+        Add a node to the end of the linked list
+        """
+        node = Node(value)
+        if not self.head:
+            self.head = node
+
+        else:
+            the_list = self.head
+            while the_list.next_ != None:
+                the_list = the_list.next_
+            the_list.next_ = node
+
+    def insert_before(self, value, new_value):
+        """
+        adds a new node with the given new value immediately before the first node that has the value specified.
+        """
+        the_list = self.head
+        if the_list.value == value:
+            self.insert(new_value)
+        else:
+            while the_list:
+                if the_list.next_.value == value:
+                    next_value = the_list.next_
+                    the_list.next_ = Node(new_value)
+                    the_list.next_.next_ = next_value
+                    break
+                the_list = the_list.next_
+
+    def insert_after(self, value, new_value):
+        """
+        Adds a new node with the given new value immediately after the first node that has the value specified.
+        """
+        the_list = self.head
+        while the_list:
+            if the_list.value == value:
+                next_value = the_list.next_
+                the_list.next_ = Node(new_value)
+                the_list.next_.next_ = next_value
+                break
+            the_list = the_list.next_
+
 
 if __name__ == "__main__":
     ll = LinkedList()
@@ -52,9 +95,3 @@ if __name__ == "__main__":
     ll.insert(3)
     ll.insert(4)
     ll.__str__()
-
-#     def reverse_list(ll):
-#         # method body here
-
-#         arr = ll[::-1]
-#         return arr
