@@ -274,3 +274,22 @@ def test_kth_same_length():
     print(actual)
     # Assert
     assert actual == expected
+
+
+def test_zip():
+    # Arrange
+    expected = '{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> { 6 } -> NULL'
+    # Actual
+    ll_one = LinkedList()
+    ll_two = LinkedList()
+    ll_one.insert(5)
+    ll_one.insert(3)
+    ll_one.insert(1)
+    ll_two.insert(6)
+    ll_two.insert(4)
+    ll_two.insert(2)
+    ll_one.zip(a=ll_one, b=ll_two)
+    actual = ll_one.__str__()
+    print(actual)
+    # Assert
+    assert actual == expected

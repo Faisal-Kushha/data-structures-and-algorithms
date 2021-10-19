@@ -104,6 +104,18 @@ class LinkedList:
         else:
             return 0
 
+    def zip(self, a, b):
+        first_list = a.head
+        second_list = b.head
+        while first_list != None and second_list != None:
+            first_next = first_list.next_
+            second_next = second_list.next_
+            first_list.next_ = second_list
+            second_list.next_ = first_next
+            first_list = first_next
+            second_list = second_next
+            b.head = second_list
+
 
 if __name__ == "__main__":
     ll = LinkedList()
