@@ -189,3 +189,88 @@ def test_insert_node_after_end():
     print(actual)
     # Assert
     assert actual == expected
+
+
+def test_kth_happy():
+    # Arrange
+    expected = 6
+    # Actual
+    ll = LinkedList()
+    ll.append(4)
+    ll.append(5)
+    ll.append(6)
+    actual = ll.kth(2)
+    print(actual)
+    # Assert
+    assert actual == expected
+
+
+def test_kth_greater():
+    # Arrange
+    expected = "k value is greater than the length of the linked list"
+    # Actual
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    actual = ll.kth(7)
+    print(actual)
+    # Assert
+    assert actual == expected
+
+
+def test_kth_negative():
+    # Arrange
+    expected = "k value is not a positive integer"
+    # Actual
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    actual = ll.kth(-3)
+    print(actual)
+    # Assert
+    assert actual == expected
+
+
+def test_kth_size_one():
+    # Arrange
+    expected = 1
+    # Actual
+    ll = LinkedList()
+    ll.append(1)
+    actual = ll.kth(0)
+    print(actual)
+    # Assert
+    assert actual == expected
+
+
+def test_kth_middle():
+    # Arrange
+    expected = 5
+    # Actual
+    ll = LinkedList()
+    ll.append(3)
+    ll.append(4)
+    ll.append(6)
+    ll.append(7)
+    ll.insert_before(6, 5)
+    actual = ll.kth(2)
+    print(actual)
+    # Assert
+    assert actual == expected
+
+
+def test_kth_same_length():
+    # Arrange
+    expected = "k value and the length of the list are the same"
+    # Actual
+    ll = LinkedList()
+    ll.append(3)
+    ll.append(4)
+    ll.append(6)
+    ll.append(7)
+    actual = ll.kth(4)
+    print(actual)
+    # Assert
+    assert actual == expected

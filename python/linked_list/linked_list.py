@@ -87,6 +87,23 @@ class LinkedList:
                 break
             the_list = the_list.next_
 
+    def kth(self, k):
+        the_list = self.head
+        length = 0
+        while the_list:
+            if length == k:
+                return the_list.value
+            length += 1
+            the_list = the_list.next_
+        if k == length:
+            return "k value and the length of the list are the same"
+        elif k > length:
+            return "k value is greater than the length of the linked list"
+        elif k < 0:
+            return "k value is not a positive integer"
+        else:
+            return 0
+
 
 if __name__ == "__main__":
     ll = LinkedList()
