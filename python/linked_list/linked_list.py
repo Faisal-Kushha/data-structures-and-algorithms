@@ -116,6 +116,28 @@ class LinkedList:
             second_list = second_next
             b.head = second_list
 
+    # def reverseList(self):
+    #     new_list = []
+    #     current = self.head
+    #     list2 = LinkedList()
+    #     while current:
+    #         new_list = new_list + [current.value]
+    #         current = current.next_
+    #     list2.insert(new_list[- 1])
+    #     for i in range(len(new_list) - 1):
+    #         list2.append(new_list[- 2 - i])
+    #     return (f'head->{list2}')
+
+    # def reverseList(self):
+
+    #     first = self.head
+    #     while first != None:
+    #         second = first.next_
+    #         third = second.next_
+    #         forth = third.next_
+    #         first = forth
+    #     return (f'head->{self}')
+
 
 if __name__ == "__main__":
     ll = LinkedList()
@@ -124,3 +146,4 @@ if __name__ == "__main__":
     ll.insert(3)
     ll.insert(4)
     ll.__str__()
+    print(ll.reverseList())
