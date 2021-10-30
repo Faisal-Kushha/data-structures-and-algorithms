@@ -2,23 +2,33 @@ from stack_and_queue.stack_queue import Stack
 
 
 def validate_brackets(string):
-    stack = Stack()
-    opening_brackets = ["(", "{", "["]
-    closing_brackets = [")", "}", "]"]
+    """
+    A function called validate brackets representing whether or not the brackets in the string are balanced
+    Arguments: string
+    Return: boolean
+    """
 
+    stack = Stack()
     for i in string:
-        if i == "(" or i == "{" or i == "[":
+
+        if i == "(" or i == "[" or i == "{":
             stack.push(i)
-        elif i == ")" or i == "}" or i == "]":
-            if stack.is_empty:
-                return False
-            elif i in opening_brackets and stack.top.value in opening_brackets:
-                stack.pop()
-            elif i in closing_brackets and stack.top.value in closing_brackets:
-                stack.pop()
+        else:
+
+            if not stack.top:
+                return True
             else:
-                return False
-    if stack.is_empty:
+                top = stack.top.value
+                if (
+                    i == ")"
+                    and top == "("
+                    or i == "]"
+                    and top == "["
+                    or i == "}"
+                    and top == "{"
+                ):
+                    stack.pop()
+    if not stack.top:
         return True
     else:
         return False
