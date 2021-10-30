@@ -136,38 +136,40 @@ def test_in_order():
 
 
 def test_empty_tree():
+    # Create tree instance
     tree = BinarySearchTree()
-    actual = tree.value
+    # Actual
+    actual = tree.root
+    # Expected
     expected = None
+    # Assert
     assert actual == expected
 
 
 def test_single_root_node():
+    # Create tree instance
     tree = BinarySearchTree()
     tree.add(1)
     tree.add(2)
     tree.add(3)
     tree.add(4)
+    # Actual
     actual = tree.root.value
+    # Expected
     expected = 1
+    # Assert
     assert actual == expected
 
 
 def test_add_left_child_right_child():
+    # Create tree instance
     tree = BinarySearchTree()
-    tree.add(1)
+    tree.add(11)
     tree.add(2)
-    tree.add(3)
+    tree.add(33)
+    # Actual
     actual = (tree.root.left.value, tree.root.right.value)
-    expected = (2, 3)
+    # Expected
+    expected = (33, 2)
+    # Assert
     assert actual == expected
-
-
-test_bfs()
-test_bfs_2()
-test_pre_order()
-test_in_order()
-test_post_order()
-test_empty_tree()
-test_single_root_node()
-test_add_left_child_right_child()

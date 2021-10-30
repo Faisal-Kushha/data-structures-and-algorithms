@@ -1,8 +1,3 @@
-"""
-This Module defines a Node and a Binary Tree
-"""
-
-
 class Node:
     def __init__(self, value, left=None, right=None):
         self.value = value
@@ -27,15 +22,13 @@ class Queue:
 
 
 class BinaryTree:
-    def _init_(self):
+    def __init__(self):
         self.root = None
 
     def bfs(self):
         """
         A binary tree method which returns a list of items that it contains
-
         input: None
-
         output: tree items
         """
         # Queue queue <-- new Queue()
@@ -60,11 +53,8 @@ class BinaryTree:
     def pre_order(self):
         """
         A binary tree method which returns a list of items that it contains
-
         input: None
-
         output: tree items
-
         sub method : walk () to make the recursion staff
         """
         list_of_items = []
@@ -104,9 +94,7 @@ class BinaryTree:
     def post_order(self):
         """
         A binary tree method which returns a list of items in post order
-
         input: None
-
         output: tree items
         """
         list_of_items = []
@@ -126,6 +114,17 @@ class BinaryTree:
 
 
 class BinarySearchTree(BinaryTree):
+    """
+    Binary Search Tree class and it's a sub-class of the Binary Tree Class, it has two methods:
+    1- Add Method which take:-
+    Arguments: value
+    Return: nothing
+
+    2- Contains Method which take:-
+    Argument: value
+    Returns: boolean indicating whether or not the value is in the tree at least once.
+    """
+
     def add(self, value):
 
         if self.root == None:
@@ -134,7 +133,7 @@ class BinarySearchTree(BinaryTree):
             current = self.root
 
             while current:
-                if value < current.value:
+                if value > current.value:
                     if not current.left:
                         current.left = Node(value)
                         break
@@ -148,13 +147,13 @@ class BinarySearchTree(BinaryTree):
     def contains(self, value):
 
         if self.root == None:
-            return "Empty tree"
+            return False
         else:
             current = self.root
             while current:
                 if current.value == value:
                     return True
-                elif value < current.value:
+                elif value > current.value:
                     if not current.left:
                         return False
                     current = current.left
