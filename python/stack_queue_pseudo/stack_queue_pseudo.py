@@ -33,6 +33,18 @@ class Stack:
 
 
 class PseudoQueue:
+    """
+    pseudo queue class which will implement the standard queue interface and have these methods listed below:
+
+    1- enqueue method which takes:
+    Arguments: value
+    Inserts value into the PseudoQueue, using a first-in, first-out approach.
+    2- dequeue methhod which takes:
+    Arguments: none
+    Extracts a value from the PseudoQueue, using a first-in, first-out approach.
+    3- str method which will print the final value as a string
+    """
+
     def __init__(self):
         self.front = Stack()
         self.rear = Stack()
@@ -54,10 +66,10 @@ class PseudoQueue:
         current = self.front.top
         while current:
             if current.next == None:
-                output = output + "{ " + current.value + " }"
+                output = output + "{ " + str(current.value) + " }"
                 current = current.next
             else:
-                output = output + "{ " + current.value + " } -> "
+                output = output + "{ " + str(current.value) + " } -> "
                 current = current.next
         return output
 
