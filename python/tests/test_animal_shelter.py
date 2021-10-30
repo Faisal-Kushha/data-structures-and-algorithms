@@ -1,10 +1,11 @@
-from stack_and_queue.animal_shelter import AnimalShelter
+from Animal_Shelter.animal_shelter import AnimalShelter
 
 
 def test_happy_path():
     animalShelter = AnimalShelter()
+    animalShelter.enqueue("cat")
     # Actual
-    actual = animalShelter.enqueue("cat")
+    actual = animalShelter.cat.front.value
     # Expected
     expected = "cat"
     # Assert
@@ -13,8 +14,9 @@ def test_happy_path():
 
 def test_expected_failure():
     animalShelter = AnimalShelter()
+    animalShelter.enqueue("dog")
     # Actual
-    actual = animalShelter.enqueue("dog")
+    actual = animalShelter.dog.front.value
     # Expected
     expected = "cat"
     # Assert
