@@ -113,6 +113,11 @@ class BinaryTree:
         return list_of_items
 
     def max_value(self):
+        """
+        A binary tree method which search for and find the maximum value in the tree
+        Arguments: none
+        Returns: number
+        """
         self.max = 0
 
         def walk(node):
