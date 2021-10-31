@@ -3,6 +3,7 @@ Tests for Binary Tree
 """
 
 from trees.trees import BinaryTree, Node, BinarySearchTree
+import pytest
 
 
 def test_bfs():
@@ -173,3 +174,46 @@ def test_add_left_child_right_child():
     expected = (33, 2)
     # Assert
     assert actual == expected
+
+
+def test_happy_path_max(max_tree):
+    # Actual
+    actual = max_tree.max_value()
+    # Expected
+    expected = 11
+    # Assert
+    assert actual == expected
+
+
+def test_expected_failure_max(max_tree):
+    # Actual
+    actual = max_tree.max_value()
+    # Expected
+    expected = 9
+    # Assert
+    assert actual != expected
+
+
+def test_edge_case_max(max_tree):
+    max_tree.root = Node(20)
+    # Actual
+    actual = max_tree.max_value()
+    # Expected
+    expected = 20
+    # Assert
+    assert actual == expected
+
+
+@pytest.fixture
+def max_tree():
+    tree = BinaryTree()
+    tree.root = Node(2)
+    tree.root.left = Node(7)
+    tree.root.right = Node(5)
+    tree.root.left.left = Node(2)
+    tree.root.left.right = Node(6)
+    tree.root.left.right.left = Node(5)
+    tree.root.left.right.right = Node(11)
+    tree.root.right.right = Node(9)
+    tree.root.right.right.left = Node(4)
+    return tree
