@@ -2,7 +2,7 @@
 Tests for Binary Tree
 """
 
-from trees.trees import BinaryTree, Node, BinarySearchTree
+from trees.trees import BinaryTree, Node, BinarySearchTree, breadth_first
 import pytest
 
 
@@ -200,6 +200,34 @@ def test_edge_case_max(max_tree):
     actual = max_tree.max_value()
     # Expected
     expected = 20
+    # Assert
+    assert actual == expected
+
+
+def test_breadth_first_happy_path(max_tree):
+    # Actual
+    actual = breadth_first(max_tree)
+    # Expected
+    expected = [2, 7, 5, 2, 6, 9, 5, 11, 4]
+    # Assert
+    assert actual == expected
+
+
+def test_breadth_first_expected_failure(max_tree):
+    # Actual
+    actual = breadth_first(max_tree)
+    # Expected
+    expected = [2, 7, 5, 2, 6, 9, 5, 12, 4]
+    # Assert
+    assert actual != expected
+
+
+def test_breadth_first_edge_case():
+    tree = BinaryTree()
+    # Actual
+    actual = breadth_first(tree)
+    # Expected
+    expected = []
     # Assert
     assert actual == expected
 

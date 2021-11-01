@@ -185,3 +185,34 @@ class BinarySearchTree(BinaryTree):
                     if not current.right:
                         return False
                     current = current.right
+
+
+def breadth_first(tree):
+    """
+    A function that will take
+    Arguments: tree
+    Return: list of all values in the tree, in the order they were encountered
+    """
+    # Queue queue <-- new Queue()
+    queue = Queue()
+    # queue.enqueue(root)
+    queue.enqueue(tree.root)
+
+    list_of_items = []
+    if not tree.root:
+        return []
+    while queue.peek():
+        front = queue.dequeue()
+        list_of_items += [front.value]
+
+        if front.left:
+            queue.enqueue(front.left)
+
+        if front.right:
+            queue.enqueue(front.right)
+
+    return list_of_items
+
+
+if __name__ == "__main__":
+    tree = BinaryTree()
