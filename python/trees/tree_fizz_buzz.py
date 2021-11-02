@@ -1,8 +1,18 @@
 class Node:
-    def __init__(self, value, left=None, right=None):
-        self.value = value
+    """
+    Node Class with add child method
+    """
+
+    def init(self, data, left=None, right=None, perant=None):
+        self.value = data
         self.left = left
         self.right = right
+        self.perant = perant
+        self.children = []
+
+    def add_child(self, child):
+        self.perant = self
+        self.children.append(child)
 
 
 class Queue:
@@ -22,8 +32,13 @@ class Queue:
 
 
 class k_ary_tree:
-    def __init__(self):
-        self.root = None
+    """
+    K ary binary tree Class
+
+    """
+
+    def init(self, root=None):
+        self.root = root
 
     def bfs(self):
         """
