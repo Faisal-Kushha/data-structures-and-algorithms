@@ -1,6 +1,6 @@
 # Code Challenge: Class 15: Binary Tree and BST Implementation
 
-## Features
+## Challenge
 
 ### Node
 
@@ -52,6 +52,46 @@ Write tests to prove the following functionality:
 [x] Can successfully return a collection from an inorder traversal
 
 [x] Can successfully return a collection from a postorder traversal
+
+## Approach & Efficiency
+
+I created a 'Node' class that has properties for the value stored in the node for both side the left and the right. Then I created a 'Binary Tree class' thet had a methods for each of the depth first traversals: pre order, in order, post order. Additionally I created a 'Binary Search Tree class' which had two methods: 'Add' method that going to add a new node with value in certain location in the binary search tree, and 'Contains' method that will return True or False if the value is in the tree or not. MoreOver, I created a tests for esch methods. Big O: O(1), O(n).
+
+## API
+
+```
+Breadth First
+A binary tree method which returns a list of items that it take input as None and return tree items
+```
+
+```
+Pre Order
+A binary tree method which returns a list of items in pre order and it will take input as None and return tree items.
+sub method : walk () to make the recursion staff
+```
+
+```
+In Order
+A binary tree method which returns a list of items in order and it will take input as None and return tree items.
+sub method : walk () to make the recursion staff
+```
+
+```
+Post Order
+A binary tree method which returns a list of items in post order and it will take input as None and return tree items.
+sub method : walk () to make the recursion staff
+```
+
+```
+Binary Search Tree class and it's a sub-class of the Binary Tree Class, it has two methods:
+1- Add Method which take:-
+Arguments: value
+Return: nothing
+
+2- Contains Method which take:-
+Argument: value
+Returns: boolean indicating whether or not the value is in the tree at least once.
+```
 
 ## Pull Request
 
