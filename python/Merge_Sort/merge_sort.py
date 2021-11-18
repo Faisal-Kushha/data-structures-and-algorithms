@@ -73,5 +73,6 @@ def merge(left, right, arr):
     print(i, j, k, arr)
 
 
-a = [8, 4, 23, 42, 16, 15]
-print(merge_sort(a))
+arr = [38, 27, 43, 3, 9, 82, 10]
+# a = [8, 4, 23, 42, 16, 15]
+print(merge_sort(arr))
