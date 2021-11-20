@@ -8,3 +8,7 @@ def insertion_sort(arr):
             j -= 1
         arr[j + 1] = temp
     return arr
+
+
+arr = [8, 4, 23, 42, 16, 15]
+print(insertion_sort(arr))

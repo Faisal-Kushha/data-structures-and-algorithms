@@ -2,11 +2,13 @@
 
 ## Challenge Summary
 
-<!-- Description of the challenge -->
+Write an Insertion sort function that takes an array and return it sorted.
+
+[BLOG](python/Insertion Sort/BLOG.md)
 
 ## Whiteboard Process
 
-<!-- Embedded whiteboard image -->
+![code26](python/Insertion Sort/Code26.png)
 
 ## Approach & Efficiency
 
@@ -35,3 +37,5 @@ def insertionSort(arr):
 ```
 
 ## Pull Request
+
+https://github.com/Faisal-Kushha/data-structures-and-algorithms/pull/36
