@@ -4,6 +4,10 @@
 
 Write a function that takes three argument (array, the first index, the last index) then sort the array in ascending way
 
+## WhiteBoard
+
+![Code28](Code28.png)
+
 ## Approach & Efficiency
 
 [BLOG](BLOG.md)
