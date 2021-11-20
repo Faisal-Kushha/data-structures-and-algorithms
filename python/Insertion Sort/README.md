@@ -4,11 +4,11 @@
 
 Write an Insertion sort function that takes an array and return it sorted.
 
-[BLOG](python/Insertion Sort/BLOG.md)
+[BLOG](BLOG.md)
 
 ## Whiteboard Process
 
-![code26](python/Insertion Sort/Code26.png)
+![code26](Code26.png)
 
 ## Approach & Efficiency
 
