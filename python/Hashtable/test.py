@@ -1,4 +1,4 @@
-from hashtable import HashTable
+from hashtable import HashTable, repeated_word
 
 """
 "a"
@@ -65,3 +65,24 @@ def test_collision_value():
     actual = hashtable.get('FF')
     expected = 140
     assert actual == expected
+
+
+def test_happy_path():
+    text = "Once upon a time, there was a brave princess who..."
+    actual = repeated_word(text)
+    excepted = 'a'
+    assert actual == excepted
+
+
+def test_edge_case():
+    text = ''
+    actual = repeated_word(text)
+    excepted = 'No text'
+    assert actual == excepted
+
+
+def test_expected_failure():
+    text = "Once upon a time, there was very brave princess who..."
+    actual = repeated_word(text)
+    excepted = "No repeated word"
+    assert actual == excepted
