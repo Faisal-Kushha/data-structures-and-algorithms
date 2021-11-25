@@ -103,20 +103,28 @@ class HashTable:
 
 
 def repeated_word(text=None):
-    if not text:
-        return 'No text'
     Hash_Table = HashTable()
-    text = re.sub('\W+', ' ', text).lower().split()
-    for word in text:
-        if Hash_Table.contains(word):
-            return word
-        else:
-            Hash_Table.add(word, True)
-    return "No repeated word"
+    if text is not None:
+        text = re.sub('\W+', ' ', text).lower().split()
+        max_word = 0
+        new_word = ''
+        for word in text:
+            counter = 0
+            if Hash_Table.contains(word):
+                temp = Hash_Table.get(word)
+                temp = temp + 1
+                Hash_Table.add(word, temp)
+                if temp > max_word:
+                    max_word = temp
+                    new_word = word
+            else:
+                Hash_Table.add(word, counter+1)
+
+        return new_word, max_word
 
 
 if __name__ == "__main__":
 
-    text = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only..."
-
+    # text = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only..."
+    text = "No. Try not. Do or do not. There is no try."
     print(repeated_word(text))

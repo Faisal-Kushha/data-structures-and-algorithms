@@ -59,6 +59,8 @@ class HashTable:
 
 def left_join(hashmap1, hashmap2):
     arr1 = []
+    __dict__
+    __iter__
     if hashmap1.buckets == hashmap1.size*[None] or hashmap2.buckets == hashmap2.size*[None]:
         return 'Hash table is empty'
     for item in hashmap1.buckets:
