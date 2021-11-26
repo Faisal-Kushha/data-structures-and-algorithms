@@ -10,22 +10,22 @@ def test_happy_path(prepared_hash1, prepared_hash2):
 
 
 def test_edge_case():
-    hashmap1 = HashTable()
-    hashmap2 = HashTable()
+    hashtable_one = HashTable()
+    hashtable_two = HashTable()
 
-    actual = left_join(hashmap1, hashmap2)
+    actual = left_join(hashtable_one, hashtable_two)
     expected = 'Hash table is empty'
     assert actual == expected
 
 
 def test_expected_failure(prepared_hash1):
-    hashmap2 = HashTable()
-    hashmap2.add('hi', 'averse')
-    hashmap2.add('wrath', 'delight')
-    hashmap2.add('diligent', 'idle')
-    hashmap2.add('guide', 'follow')
-    hashmap2.add('flow', 'jam')
-    actual = left_join(prepared_hash1, hashmap2)
+    hashtable_two = HashTable()
+    hashtable_two.add('hi', 'averse')
+    hashtable_two.add('wrath', 'delight')
+    hashtable_two.add('diligent', 'idle')
+    hashtable_two.add('guide', 'follow')
+    hashtable_two.add('flow', 'jam')
+    actual = left_join(prepared_hash1, hashtable_two)
     expected = [['wrath', 'anger', 'delight'], ['outfit', 'garb', None], [
         'diligent', 'employed', 'idle'], ['guide', 'usher', 'follow'], ['fond', 'enamored', 'averse']]
     assert actual != expected
@@ -33,21 +33,21 @@ def test_expected_failure(prepared_hash1):
 
 @pytest.fixture
 def prepared_hash1():
-    hashmap1 = HashTable()
-    hashmap1.add('fond', 'enamored')
-    hashmap1.add('wrath', 'anger')
-    hashmap1.add('diligent', 'employed')
-    hashmap1.add('outfit', 'garb')
-    hashmap1.add('guide', 'usher')
-    return hashmap1
+    hashtable_one = HashTable()
+    hashtable_one.add('fond', 'enamored')
+    hashtable_one.add('wrath', 'anger')
+    hashtable_one.add('diligent', 'employed')
+    hashtable_one.add('outfit', 'garb')
+    hashtable_one.add('guide', 'usher')
+    return hashtable_one
 
 
 @pytest.fixture
 def prepared_hash2():
-    hashmap2 = HashTable()
-    hashmap2.add('fond', 'averse')
-    hashmap2.add('wrath', 'delight')
-    hashmap2.add('diligent', 'idle')
-    hashmap2.add('guide', 'follow')
-    hashmap2.add('flow', 'jam')
-    return hashmap2
+    hashtable_two = HashTable()
+    hashtable_two.add('fond', 'averse')
+    hashtable_two.add('wrath', 'delight')
+    hashtable_two.add('diligent', 'idle')
+    hashtable_two.add('guide', 'follow')
+    hashtable_two.add('flow', 'jam')
+    return hashtable_two

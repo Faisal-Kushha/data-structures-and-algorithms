@@ -57,34 +57,35 @@ class HashTable:
         return None
 
 
-def left_join(hashmap1, hashmap2):
+def left_join(hashtable_one, hashtable_two):
     arr1 = []
-    __dict__
-    __iter__
-    if hashmap1.buckets == hashmap1.size*[None] or hashmap2.buckets == hashmap2.size*[None]:
+    # __dict__
+    # __iter__
+    # if hashtable_one.buckets == hashtable_one.size*[None] or hashtable_two.buckets == hashtable_two.size*[None]:
+    if hashtable_one.__dict__['buckets'] == hashtable_one.__dict__['size']*[None] or hashtable_two.__dict__['buckets'] == hashtable_two.__dict__['size']*[None]:
         return 'Hash table is empty'
-    for item in hashmap1.buckets:
+    for item in hashtable_one.__dict__['buckets']:
         if item:
             arr2 = []
             arr2.append(item.head.value[0])
-            arr2.append(hashmap1.get(item.head.value[0]))
-            arr2.append(hashmap2.get(item.head.value[0]))
+            arr2.append(hashtable_one.get(item.head.value[0]))
+            arr2.append(hashtable_two.get(item.head.value[0]))
             arr1.append(arr2)
     return arr1
 
 
 if __name__ == "__main__":
-    hashmap1 = HashTable()
-    hashmap1.add('fond', 'enamored')
-    hashmap1.add('wrath', 'anger')
-    hashmap1.add('diligent', 'employed')
-    hashmap1.add('outfit', 'garb')
-    hashmap1.add('guide', 'usher')
-    hashmap2 = HashTable()
-    hashmap2.add('fond', 'averse')
-    hashmap2.add('wrath', 'delight')
-    hashmap2.add('diligent', 'idle')
-    hashmap2.add('guide', 'follow')
-    hashmap2.add('flow', 'jam')
+    hashtable_one = HashTable()
+    hashtable_one.add('fond', 'enamored')
+    hashtable_one.add('wrath', 'anger')
+    hashtable_one.add('diligent', 'employed')
+    hashtable_one.add('outfit', 'garb')
+    hashtable_one.add('guide', 'usher')
+    hashtable_two = HashTable()
+    hashtable_two.add('fond', 'averse')
+    hashtable_two.add('wrath', 'delight')
+    hashtable_two.add('diligent', 'idle')
+    hashtable_two.add('guide', 'follow')
+    hashtable_two.add('flow', 'jam')
 
-    print(left_join(hashmap1, hashmap2))
+    print(left_join(hashtable_one, hashtable_two))
