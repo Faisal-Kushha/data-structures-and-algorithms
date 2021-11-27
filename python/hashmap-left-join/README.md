@@ -25,18 +25,19 @@ Big O: O(n^2), O(n)
 ## Solution
 
 ```
-def left_join(hashmap1, hashmap2):
+def left_join(hashtable_one, hashtable_two):
     arr1 = []
-    if hashmap1.buckets == hashmap1.size*[None] or hashmap2.buckets == hashmap2.size*[None]:
+    if hashtable_one.__dict__['buckets'] == hashtable_one.__dict__['size']*[None] or hashtable_two.__dict__['buckets'] == hashtable_two.__dict__['size']*[None]:
         return 'Hash table is empty'
-    for item in hashmap1.buckets:
+    for item in hashtable_one.__dict__['buckets']:
         if item:
             arr2 = []
             arr2.append(item.head.value[0])
-            arr2.append(hashmap1.get(item.head.value[0]))
-            arr2.append(hashmap2.get(item.head.value[0]))
+            arr2.append(hashtable_one.get(item.head.value[0]))
+            arr2.append(hashtable_two.get(item.head.value[0]))
             arr1.append(arr2)
     return arr1
+
 
 ```
 
