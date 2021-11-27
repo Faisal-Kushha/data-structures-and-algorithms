@@ -14,7 +14,7 @@
 
 ## Whiteboard Process
 
-![Code33](Code33.png)
+![Code33](code33.png)
 
 ## Approach & Efficiency
 
