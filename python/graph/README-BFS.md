@@ -13,7 +13,19 @@ Write the following method for the Graph class:
 
 ## Approach & Efficiency
 
-Create a function that take the vertex(node) as an input. Check if the node in the graph. Declare a queue Declare a set Enqueue the node and add it to the set Loop through the Queue Return the node
+Create a function that takes the vertex(node) as an input.
+Check if the node in the graph.
+Declare a queue
+Declare a set
+Enqueue the node and add it to the set
+Loop through the Queue till the length of queue is zero
+Dequeue The Front
+Take an action of setting the front to None
+Get all neighbors as list
+Loop over the list of neighbors
+Set the edge vertex as neighbor
+Check if the neighbor is not in visited and add it to visited then enqueue it
+Return the node
 
 Big O: O(n), O(n^2).
 
