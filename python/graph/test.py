@@ -96,24 +96,24 @@ def test_get_neighbors():
     assert neighbor_edge.weight == 44
 
 
-def test_happy_path():
-    graph = Graph()
-    one = graph.add_node('one')
-    two = graph.add_node('two')
-    three = graph.add_node('three')
-    graph.add_edge(one, two)
-    graph.add_edge(two, one)
-    graph.add_edge(one, three)
-    graph.add_edge(two, three)
-    graph.add_edge(three, one)
-    graph.add_edge(three, two)
-    actual = graph.breadth_first_search(three)
-    print(actual)
-    expected = ['one', 'two', 'three']
-    assert actual == expected
+# def test_breadth_first_search():
+#     graph = Graph()
+#     one = graph.add_node('one')
+#     two = graph.add_node('two')
+#     three = graph.add_node('three')
+#     graph.add_edge(one, two)
+#     graph.add_edge(two, one)
+#     graph.add_edge(one, three)
+#     graph.add_edge(two, three)
+#     graph.add_edge(three, one)
+#     graph.add_edge(three, two)
+#     actual = graph.breadth_first_search(one)
+#     print(actual)
+#     expected = ['one', 'two', 'three']
+#     assert actual == expected
 
 
-def test_edge_case():
+def test_breadth_first_search1():
     graph = Graph()
     one = Vertex('one')
     actual = graph.breadth_first_search(one)
@@ -121,7 +121,7 @@ def test_edge_case():
     assert actual == expected
 
 
-def test_expected_failure():
+def test_breadth_first_search2():
     graph = Graph()
     one = graph.add_node('one')
     two = graph.add_node('two')

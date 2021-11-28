@@ -9,7 +9,7 @@ Write the following method for the Graph class:
 
 ## Whiteboard Process
 
-![code36](BFG.jpg)
+![code36](Code36.jpg)
 
 ## Approach & Efficiency
 
