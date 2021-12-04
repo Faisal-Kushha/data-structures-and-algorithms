@@ -13,13 +13,11 @@ Graphs Implementation that should be represented as an adjacency list, and it sh
 3. Edge class for adding a new edge between two nodes in the graph
 4. Graph class that contain the following methods:
 
--   `add node` Adding a node to the graph
--   `add edge` Adding an edge to the graph
--   `get nodes` Getting all nodes in the Graph
--   `get neighbors` Getting the collection of edges connected to a given node
--   `size` Returning the total number of nodes in the graph
-
-Big O: O(n)
+-   `add node` Adding a node to the graph ==> time: O(1), space: O(1)
+-   `add edge` Adding an edge to the graph ==> time : O(n), space : O(n)
+-   `get nodes` Getting all nodes in the Graph ==> time: O(n), space: O(n)
+-   `get neighbors` Getting the collection of edges connected to a given node ==> time: O(n), space: O(n)
+-   `size` Returning the total number of nodes in the graph ==> time: O(1), space: O(1)
 
 ## API
 
